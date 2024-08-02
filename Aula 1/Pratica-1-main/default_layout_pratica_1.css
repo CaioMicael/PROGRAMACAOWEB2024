@@ -1,0 +1,11 @@
+input {
+    background-color: darkgray;
+}
+
+body {
+    background-color: cornflowerblue;
+}
+
+select {
+    background-color: darkgray;
+}
