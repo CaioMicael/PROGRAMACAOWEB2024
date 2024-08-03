@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biografia</title>
+</head>
+<body>
+    <section>
+        <h1>Caio Micael Krieger</h1>
+        <img src="foto.jpg" alt="Foto de Caio Micael Krieger" width="100px">
+        <h2>Quem sou eu?</h2>
+        <p>Atualmente tenho 20 anos de idade, sou residente e natural de <em>Rio do Sul - SC</em> e trabalho na empresa 
+            <big>
+                <a href="https://www.ipm.com.br/" target="_blank">IPM Sistemas</a> 
+            </big>
+        </p>
+        <p>Estou trabalhando na área como <strong>Analista de Regra de Negócios</strong>
+            , onde o foco principal é a Prestação de Contas dos Municípios para o Tribunal de Contas do Estado.</p>
+        <h2>Habilidades</h2>
+    </section>
+    <nav>
+        <ul>
+            <li>SQL avançado</li>
+            <li>Facilidade em relações no trabalho</li>
+            <li>Comunicativo</li>
+            <li>Gosta de solucionar problemas</li>
+            <li>Facilidade em adversidades e em aprendizado</li>
+            <li>Resiliente</li>
+        </ul>
+    </nav>
+    <h2>Experiências</h2>  
+    <p>Já ministrei uma palestra sobre o e-Sfinge <i>(sistema de fiscalização do Tribunal de Contas de Santa Catarina)</i> para a AMVE <i>(Associação dos Municípios do Vale Europeu)</i> onde havia presente 14 Municípios e seus respectivos gestores. </p>
+    <img src="fotoapresentacao.jpg" alt="Foto de convite da apresentação do e-Sfinge (sistema de fiscalização do Tribunal de Contas de Santa Catarina)" width="500px">
+    <p>Desenvolvi um algoritmo em Pascal que simula a fila de um restaurante bem como outras questoes gerenciais. Exemplo de código:</p>
+    <pre>
+        //Procedimento da lista de mesas
+procedure removeMesaLista (var listaMesasOcupadas:reg_lista ; var cadastroMesas:vetMesas ; var fila_vip:reg_fila_tipo ; var fila_pref:reg_fila_tipo ; var fila_outros:reg_fila_tipo);
+var i, posicaoExclude:integer;
+	begin
+		writeln('Digite a mesa que deseja liberar');
+		readln(listaMesasOcupadas.elemento);
+		posicaoExclude := posicaoMesaRetirar(listaMesasOcupadas);
+		if posicaoExclude = 5 then
+			begin
+				dec(listaMesasOcupadas.posicaoLista);
+				setaMesaDisponivel(cadastroMesas,listaMesasOcupadas.elemento);
+			end
+		else
+			begin
+				for i:= posicaoExclude to listaMesasOcupadas.maxLista-1 do
+					listaMesasOcupadas.mesasOcupadas[i] := listaMesasOcupadas.mesasOcupadas[i+1];
+				setaMesaDisponivel(cadastroMesas,listaMesasOcupadas.elemento);
+				dec(listaMesasOcupadas.posicaoLista);
+			end;
+		insereClienteFilaPorTipo(cadastroMesas,fila_vip,fila_pref,fila_outros,listaMesasOcupadas);
+		clearScreen();	
+	end;	
+	
+procedure insereMesaLista (var listaMesasOcupadas:reg_lista ; var cadastroMesas:vetMesas ; var fila_clientes:vet_cliente);
+var i:integer;
+	begin
+		listaMesasOcupadas.mesasOcupadas[listaMesasOcupadas.posicaoLista] := listaMesasOcupadas.elemento;
+		setaMesaOcupada(cadastroMesas,listaMesasOcupadas.elemento);     
+		inc(listaMesasOcupadas.posicaoLista);	
+	end;
+    </pre>
+    <h2>Vídeo recomendado</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/TRPBY_lxJfE?si=QkiQrdwX6ahOtrep" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
+
+</body>
+</html>
