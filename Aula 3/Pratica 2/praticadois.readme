@@ -1,0 +1,14 @@
+ Criar uma página HTML para cadastramento
+de uma pessoa:
+HTML - Inputs
+Nome Tipo Características
+Nome Text Required, Máximo de Caracteres 100
+Sobrenome Text Required, Máximo de caracteres 100
+E-Mail Email Required
+Data de Nascimento Date Mínimo permitido 01/01/1920, Máximo
+permitido 01/01/2024
+Sexo Radio Opções Masculino e Feminio
+Endereço Text Máximo de Caracteres, 200
+CEP Text Máximo de Caracteres, 10
+Cor favorita Color
+Estado (UF) Selec
