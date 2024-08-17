@@ -1,0 +1,28 @@
+.divNomeSobrenomeEmail {
+    background-color: cornflowerblue;
+    border: 5px;
+    margin-bottom: 10px;
+}
+
+.divDataSexo {
+    background-color: gray;
+    border: 5px;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.divEnderecoCEPEstado {
+    background-color: gray;
+    border: 5px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+fieldset {
+    background-color: rgb(224, 224, 224);
+}
