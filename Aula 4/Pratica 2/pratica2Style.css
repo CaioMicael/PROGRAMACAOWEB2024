@@ -1,0 +1,38 @@
+body {
+    background-color: gray;
+}
+
+.Form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.botoes {
+    text-align: center;
+}
+
+fieldset {
+    width: 20%;
+    border-color: black;
+}
+
+input {
+    border-style: ridge;
+}
+
+label {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#Enviar {
+    background-color: white;
+}
+
+#Limpar {
+    background-color: red;
+}
