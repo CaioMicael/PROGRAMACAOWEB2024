@@ -11,13 +11,24 @@ Salvar os dados no formato JSON.
 Gravar 10 pessoas no arquivo.
 */
 
+$aDados = array (
+    'campo_primeiro_nome' => $_POST['campo_primeiro_nome'],
+    'campo_sobrenome' => $_POST['campo_sobrenome'],
+    'campo_email' => $_POST['campo_email'],
+    'campo_cidade' => $_POST['campo_cidade'],
+    'campo_estado' => $_POST['campo_estado'],
+    'campo_password' => $_POST['campo_password']
+);
 
-if (file_exists("dados.txt")) {
-    echo file_get_contents("dados.txt");
+
+if (file_exists("dadosPessoa.json")) {
+    $aDadosExistentes = array(file_get_contents("dadosPessoa.json"));
+    print_r($aDadosExistentes) ;
+    print_r($aDados);
+    $aDadosInsercao = $aDados + $aDadosExistentes;
+    file_put_contents("dadosPessoa.json" , json_encode($aDadosInsercao));
 }
-
-$arquivo = file_get_contents("dados.txt");
-
-file_put_contents("dados2.txt" , serialize($arquivo));
-
+else {
+    file_put_contents("dadosPessoa.json" , json_encode($aDados));
+}
 ?>
