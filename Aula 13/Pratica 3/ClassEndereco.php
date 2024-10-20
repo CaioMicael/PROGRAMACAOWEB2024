@@ -7,6 +7,14 @@ Class endereco{
     private $estado;
     private $cep;
 
+    public function __toString()  {
+        return $this -> toJson();
+    }
+
+    private function toJson() {
+        return json_encode(get_object_vars($this));
+    }
+
     public function getLogradouro() {
         return $this -> logradouro;
     }

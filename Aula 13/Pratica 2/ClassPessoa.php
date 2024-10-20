@@ -15,6 +15,10 @@ class pessoa {
         $this -> inicializaClasse();
     }
 
+    public function __toString()  {
+        return "Nome: {$this -> nome} ";
+    }
+
     private function inicializaClasse() {
         $this -> telefone = new contato;
         $this -> endereco = new endereco;

@@ -5,6 +5,14 @@ Class contato{
     private $nome;
     private $valor;
 
+    public function __toString()  {
+        return $this -> toJson();
+    }
+
+    private function toJson() {
+        return json_encode(get_object_vars($this));
+    }
+
     public function getTipo() {
         return $this -> tipo;
     }

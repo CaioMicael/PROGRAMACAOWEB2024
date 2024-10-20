@@ -15,6 +15,14 @@ class pessoa {
         $this -> inicializaClasse();
     }
 
+    public function __toString()  {
+        return $this -> toJson();
+    }
+
+    private function toJson() {
+        return json_encode(get_object_vars($this));
+    }
+
     private function inicializaClasse() {
         $this -> telefone = new contato;
         $this -> endereco = new endereco;
@@ -75,4 +83,4 @@ class pessoa {
 }
 
 
-?>
+?> 
